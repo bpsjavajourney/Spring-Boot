@@ -1,0 +1,12 @@
+#qa profile
+
+spring: 
+  datasource:    
+      url:  jdbc:h2:file:./student_qa_db 
+      username: qa-sa
+      password:
+      driverClassName:  org.h2.Driver
+      
+app:
+ custom:
+  property: http://qahost:9090/service

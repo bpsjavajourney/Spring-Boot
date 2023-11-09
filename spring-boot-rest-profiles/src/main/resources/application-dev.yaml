@@ -1,0 +1,13 @@
+#dev profile
+
+spring: 
+  datasource:    
+      url:  jdbc:h2:file:./student_dev_db  
+      username: sa
+      password:
+      driverClassName:  org.h2.Driver
+      
+
+app:
+  custom:
+    property: http://devhost:9090/service
