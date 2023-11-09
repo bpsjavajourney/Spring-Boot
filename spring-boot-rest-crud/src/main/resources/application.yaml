@@ -1,0 +1,52 @@
+#Note: By default application works with the h2 database instantly. To connect to other Databases modify the datasource setttings accordingly.
+
+server:
+ port: 8080
+ 
+#Configure h2 or oracle or mysql or postgresql
+app:
+  datasource:
+    enabled: h2
+
+spring:
+  application:
+    name: springbootcrud
+  datasource:
+    h2:
+      jdbcUrl:  jdbc:h2:file:./student_db   
+      username: sa
+      password:
+      driverClassName:  org.h2.Driver
+    oracle:
+      jdbcUrl:  jdbc:oracle:thin:@//localhost:1521/xe
+      username: student_db
+      password: student_db
+      driverClassName:  oracle.jdbc.driver.OracleDriver
+    mysql:
+      jdbcUrl:  jdbc:mysql://localhost:3306/student_db
+      username: student_db
+      password: student_db
+      driverClassName:  com.mysql.cj.jdbc.Driver
+    postgresql:
+      jdbcUrl:  jdbc:postgresql://localhost:5432/student_db
+      username: postgres
+      password: admin
+      driverClassName:  org.postgresql.Driver       
+  jackson:
+    serialization:
+      fail-on-empty-beans:  false
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ 
+#logging:
+#  level:
+#    org:
+#      springframework:  DEBUG
+    
+ 
