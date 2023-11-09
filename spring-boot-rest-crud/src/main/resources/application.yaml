@@ -10,7 +10,7 @@ app:
 
 spring:
   application:
-    name: springbootcrud
+    name: spring-boot-rest-crud
   datasource:
     h2:
       jdbcUrl:  jdbc:h2:file:./student_db   
