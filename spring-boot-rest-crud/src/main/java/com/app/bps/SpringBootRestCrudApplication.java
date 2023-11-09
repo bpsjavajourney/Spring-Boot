@@ -19,9 +19,10 @@ public class SpringBootRestCrudApplication {
 
 	public static void main(String[] args) {		
 		SpringApplication.run(SpringBootRestCrudApplication.class, args);
-		logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		logger.info("Go to properties file to make h2(default)/Oracle/MySql/Postgress datasource changes");
 		logger.info("Refer docs/readme.txt for the Swagger URL and Request/Response json");
-		logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		
 	}	
 }
