@@ -1,0 +1,63 @@
+#spring-boot-redis-cache applicaiton demonstrates caching of objects using redis
+
+server:
+ port: 8080
+
+spring:
+  application:
+    name: spring-boot-redis-cache
+  data:
+    redis:
+     host: localhost
+     port: 6379 
+     database: 0
+     password:      
+  cache:
+     type: redis
+     #redis:   #set default cache ttl. This application uses custom approach.
+      #time-to-live: 300000       
+  datasource:   
+      url:  jdbc:h2:file:./item_db   
+      username: sa
+      password:
+      driverClassName:  org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+      
+  jackson:
+    serialization:
+      fail-on-empty-beans:  false
+
+
+
+#These are application specific properties
+#caching.scheduler.active=true  uses ScheduleConfig.java scheduler approach to set time-to-live(ttl) of the cache
+#caching.scheduler.active=false uses CacheConfig.java to set customconfig RedisCacheManager
+caching:
+ scheduler:
+  active: false
+ spring:
+  ttl:
+   itemservice:
+    items: 60000
+    allItems: 120000
+    
+
+      
+#Enables actuators      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+        
+#logging:
+#  level:
+#    org:
+#      springframework:  DEBUG
+#    
+   
