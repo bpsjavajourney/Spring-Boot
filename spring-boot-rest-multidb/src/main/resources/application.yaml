@@ -1,0 +1,32 @@
+# Application uses two MySql Database datasources. Make the datasource changes as required. 
+
+server:
+  port: 8080
+  
+  
+spring:
+  application:
+    name: spring-boot-rest-multidb
+  datasource:
+    person-db:
+      jdbcUrl:  jdbc:mysql://localhost:3306/person_db
+      username: admin
+      password: admin
+      driverClassName:  com.mysql.cj.jdbc.Driver
+    address-db:
+      jdbcUrl:  jdbc:mysql://localhost:3306/address_db
+      username: admin
+      password: admin
+      driverClassName:  com.mysql.cj.jdbc.Driver   
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+        
+#logging:
+#  level:
+#    org:
+#      springframework:  DEBUG
