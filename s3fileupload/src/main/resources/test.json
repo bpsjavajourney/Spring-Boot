@@ -1,0 +1,7 @@
+{
+  "id": 1,
+  "name": "Test File",
+  "description": "This is a simple JSON file for upload",
+  "active": true,
+  "tags": ["sample", "upload", "json"]
+}
