@@ -31,7 +31,6 @@ import lombok.Setter;
  * @author parth
  *
  */
-
 @Entity
 @Table(name = "MARKS")
 @Getter
