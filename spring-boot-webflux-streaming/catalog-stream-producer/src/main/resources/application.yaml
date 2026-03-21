@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: catalog-stream-producer
+
+server:
+  port: 8081
