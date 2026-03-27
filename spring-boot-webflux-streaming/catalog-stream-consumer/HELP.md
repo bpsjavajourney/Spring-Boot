@@ -15,13 +15,17 @@ It does not process or store data. It just streams it through.
 
 How it works
 ----------------------
-Client sends request with catalog codes
-Consumer calls producer using WebClient
-Producer streams chunked data
-Consumer reads it as a stream (Flux)
-Consumer immediately forwards each chunk to the client
+-Client sends request with catalog codes
 
-No waiting for full response.
+-Consumer calls producer using WebClient
+
+-Producer streams chunked data
+
+-Consumer reads it as a stream (Flux)
+
+-Consumer immediately forwards each chunk to the client
+
+-No waiting for full response.
 
 Endpoint
 ----------------------
@@ -44,10 +48,10 @@ Response
 Stream of CatalogChunk objects.
 
 Each response chunk contains:
-catalog code
-chunk number
-total chunks
-chunk size
+catalog code, 
+chunk number, 
+total chunks, 
+chunk size and 
 partial data
 
 

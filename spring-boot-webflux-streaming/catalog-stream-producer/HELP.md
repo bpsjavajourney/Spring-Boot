@@ -11,11 +11,16 @@ Instead of returning one large response, it breaks the data into smaller pieces 
 How it works
 ----------------------
 Client sends a list of catalog codes
+
 For each code:
-service loads a large dataset
-splits it into smaller chunks
-streams chunks one by one
-Response is sent as a stream (text/event-stream)
+
+-service loads a large dataset
+
+-splits it into smaller chunks
+
+-streams chunks one by one and 
+
+-Response is sent as a stream (text/event-stream)
 
 Endpoint
 ----------------------
@@ -38,10 +43,10 @@ Response
 Stream of CatalogChunk objects.
 
 Each response chunk contains:
-catalog code
-chunk number
-total chunks
-chunk size
+catalog code,
+chunk number,
+total chunks,
+chunk size and 
 partial data
 
 
